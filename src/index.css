@@ -24,6 +24,34 @@ body {
     overflow-x: hidden;
 }
 
+@import "tailwindcss";
+
+@utility container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 12px;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1320px;
+    }
+}
+
 @utility flex-center {
     @apply flex justify-center items-center;
 }
@@ -68,7 +96,7 @@ body {
         @apply fixed z-50 w-full;
 
         div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5  px-5 container mx-auto;
         }
 
         p {
@@ -148,7 +176,7 @@ body {
         }
 
         .list {
-            @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-0 px-5;
+            @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 px-5;
 
             .popular {
                 @apply space-y-8 w-full md:w-fit;
@@ -185,7 +213,7 @@ body {
     }
 
     #about {
-        @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+        @apply min-h-screen py-28 px-5 container mx-auto;
 
         .content {
             @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
