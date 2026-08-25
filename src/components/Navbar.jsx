@@ -8,16 +8,17 @@ const Navbar = () => {
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top",
+        toggleActions: "play none reverse none",
       },
     });
 
     navTween.fromTo(
       "nav",
-      { backgroundColor: "transparent" },
+      { background: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" },
       {
-        backgroundColor: "#00000050",
-        backgroundFiilter: "blur(10px)",
-        duration: "1s",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        backdropFilter: "blur(5px)",
+        duration: 0.4,
         ease: "power1.inOut",
       },
     );
